@@ -32,33 +32,6 @@ let data = {
   },
 };
 
-// // send with anonymous callback
-// BTCA.send(data, function (result, requestId, error) {
-//   console.log(result);
-// });
-
-// function handleRequestResponse(result, requestId, error) {
-//   console.log(result);
-//   if (error) {
-//     console.log(error);
-//   }
-// }
-// // console.log("test", BTCA.btcjsapiOperations[0].requestData.requestString);
-// function goTo() {
-//   return (
-//     <a href='btcjsapi://getList?entityName=story&id=123&jsListener=handleRequestResponse'></a>
-//   );
-// }
-
-// send with callback reference
-// BTCA.send(data, handleRequestResponse);
-// send with btcjsapi:// schema and named jsListener callback
-// BTCA.send('btcjsapi://getList?entityName=story&id=123&jsListener=handleRequestResponse')
-// BTCA.send(
-//   `btcjsapi://openList?entityName=story&id=1085272158&jsListener=handleRequestResponse`
-// );
-// location.href = `btcjsapi://openEntity?jsListener=BTCA_CB_a4538402-e306-4978-a05b-a6ca16034439;
-
 function App() {
   return (
     <div className='nav'>
@@ -96,10 +69,9 @@ function App() {
             );
             {
               /*BTCA.send(
-              `getEntity?jsListener=BTCA_CB_200c804d-4e24-4020-a3fc-cb1f8f9d83f7&requestId=1085272158`
+              `btcjsapi://getEntity?jsListener=BTCA_CB_200c804d-4e24-4020-a3fc-cb1f8f9d83f7&requestId=1085272158`
             )*/
             }
-            console.log("lol just making sure this button be working");
           }}
         >
           <i className='fas fa-user'></i>&nbsp;&nbsp;User
