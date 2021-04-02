@@ -1,11 +1,107 @@
-html {
-    height: 100%;
-    border: solid white;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Mobile first queries */
+.nav {
+  background-color: #bdbdc1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+  padding: 1rem;
+}
+
+.title {
+  display: none;
+  color: black;
+  font-size: 2em;
+}
+
+.buttons {
+  display: inline-block;
+}
+
+button {
+  background-color: #f26724;
+  border: none;
+  padding: 1em;
+  border-radius: 5px;
+  color: white;
+  font-size: 22px;
+  width: 100%;
+  margin-bottom: 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover button:active {
+  background-color: #000000d1;
+}
+button:after {
+  outline: none;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* tablet view */
+@media (min-width: 750px) {
+  .nav {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title {
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+  }
+  .buttons {
+    display: flex;
+  }
+  button {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-    background-color: black;
+    margin-left: 1.5em;
+    margin-right: 1em;
+    margin-bottom: 0;
+    padding: 0.6em 2em;
+  }
+  button:hover {
+    background-color: #000000c2;
+  }
+}
+
+/* desktop view */
+@media (min-width: 1100px) {
+  .nav {
+    padding-left: 10em;
+    padding-right: 10em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+  }
+  .buttons {
+    margin-top: -0.5rem;
+  }
+  button {
+    margin-right: 0;
+    padding: 0.6em 2em;
+  }
 }
